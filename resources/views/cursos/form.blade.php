@@ -29,22 +29,6 @@
   <div class="field">
     <label class="label">Ciclo</label>
     <div class="control">
-    <div class="select is-normal">
-      <select>
-        <option selected>Seleccionar opción</option>
-        <option>
-        <option>I</option>
-        <option>II</option>
-        <option>III</option>
-        <option>IV</option>
-        <option>V</option>
-        <option>VI</option>
-        <option>VII</option>
-        <option>VIII</option>
-        <option>IX</option>
-        <option>X</option>
-      </select>
-    </div>
     <input class="input" type="text" name="cicloC" value="{{isset($curso->cicloC)?$curso->cicloC:''}}" id="ciclo">
     </div>
   </div>
