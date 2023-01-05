@@ -3,5 +3,14 @@
 @section('title', 'Crear curso')
     
 @section('content')
-    <h1>En esta página podrás crear un curso</h1> 
+    <h1>Agregar curso</h1>
+    <a href="{{route('cursos.index')}}">Volver</a> 
+    
+
+    <form action="{{route('cursos.store')}}" method="post">
+        
+        @csrf
+        @include('cursos.form', ['modo'=>'Crear']);
+       
+    </form>
 @endsection

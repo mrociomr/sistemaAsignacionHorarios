@@ -17,8 +17,21 @@ use App\Http\Controllers\CursoController;
 
 Route::get('/', InicioController::class);
 
+/*
+Route::get('cursos', [CursoController::class, 'index'])->name('cursos.index');
+
+Route::get('cursos/create', [CursoController::class, 'create'])->name('cursos.create');
+*/
+
+Route::resource('cursos', CursoController::class);
+
+//Route::post('cursos', [CursoController::class, 'store'])->name('cursos.store');
+
+
+/*
 Route::controller(CursoController::class)->group(function(){
     Route::get('cursos', 'index');
     Route::get('cursos/create', 'create');
     Route::get('cursos/{curso}', 'show');
 });
+*/
