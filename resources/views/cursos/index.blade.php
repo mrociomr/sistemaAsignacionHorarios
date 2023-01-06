@@ -29,7 +29,7 @@
 
 
         <!------------TABLA CURSOS-------------->
-        <table class="table table-primary">
+        <table id="example" class="table table-striped nowrap" style="width:100%">
             <thead>
                 <tr>
                     <th scope="col">N°</th>
@@ -74,6 +74,8 @@
                 @endforeach
             </tbody>
         </table>
+
+        
     </div>
 
 
@@ -90,4 +92,5 @@
         </ul>
 
         {{ $cursos->links() }} -->
+        
 @endsection
