@@ -139,7 +139,7 @@
         </div>
     </header>
     <div class="container">
-      <!--  <div class="row">
+    <!--  <div class="row">
                 <div class="col-2">
                     <img src="{{ asset('images/logounap.jpg') }}" alt="Logo Universidad Nacional del Altiplano Puno" width="200" height="50">
                 </div>
