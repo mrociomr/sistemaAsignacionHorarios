@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
 
         <div class="row">
         <nav class="navbar-main" role="navigation" aria-label="main navigation">
