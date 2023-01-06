@@ -13,30 +13,6 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
     <div class="columns">
-        <div class="column is-narrow">
-            <!-----SIDEBAR--->
-            <div class="box sidebar-main" style="width: 150px;">
-                <aside class="menu">
-                    <ul class="nav flex-column">
-                        <li class="nav-item"><i class="fa-solid fa-house "></i><a class="is-size-5">Inicio</a></li>
-                        <br>
-                        <li class="nav-item"><i class="fa-solid fa-chalkboard-user"></i><a class="is-size-5">Docentes</a>
-                        </li>
-                        <br>
-                        <li class="nav-item"><i class="fa-solid fa-layer-group"></i><a class="is-size-5">Cursos</a></li>
-                        <br>
-                        <li class="nav-item"><i class="fa-solid fa-calendar-days"></i><a class="is-size-5">Horas</a></li>
-                        <li class="nav-item"><i class="fa-solid fa-code"></i><a class="is-size-5">Aulas y laboratorios</a>
-                        </li>
-                        <li class="nav-item"><i class="fa-solid fa-film"></i><a class="is-size-5">Horario</a></li>
-                        <li class="nav-item"><i class="fa-solid fa-file"></i><a class="is-size-5">Reportes</a></li>
-                    </ul>
-                </aside>
-            </div>
-        </div>
-
-
-
         <h1>Cursos</h1>
         <!---CAMPO BUSCAR-->
         <div class="panel-block">
