@@ -100,12 +100,12 @@
                         <svg class="bi pe-none me-2" width="16" height="16">
                             <use xlink:href="#people-circle"></use>
                         </svg>
-                        reportes
+                        Reportes
                     </a>
                 </li>
             </ul>
             <hr>
-            
+
         </div>
 
 
