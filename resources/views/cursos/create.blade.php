@@ -13,4 +13,5 @@
         @include('cursos.form', ['modo'=>'Crear']);
        
     </form>
+
 @endsection
