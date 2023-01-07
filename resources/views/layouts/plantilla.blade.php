@@ -179,7 +179,13 @@
     <main class="contenido">
 
     </main> -->
+                <div class="container mt-5">
+                    <br>
+                    <br>
+                    <br>
                     @yield('content')
+                    </div>
+                </div>
                 
             
         </div>
