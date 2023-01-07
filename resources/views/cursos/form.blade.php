@@ -12,19 +12,25 @@
                     <div class="form-group row">
                       <div class="col">
                         <label class="label">Código: </label>
-                        <input class="form-control" data-inputmask="'alias': 'codigo'" type="text" name="codigoC" value="{{ isset($curso->codigoC) ? $curso->codigoC : '' }} "
-                    id="codigoC">
+                        <input class="form-control" name="codigo" value="{{old('codigo')}}">
+                        @error('codigo')
+                        <small class="text-danger">{{$message}}</small>
+                        @enderror 
                       </div>
                       <div class="col">
                         <label>Área Curricular:</label>
-                        <input class="form-control" data-inputmask="'alias': 'areaC'" type="text" name="areaC"
-                        value="{{ isset($curso->areaC) ? $curso->areaC : '' }}" id="areaC">
+                        <input class="form-control" name="area" value="{{old('area')}}">
+                        @error('area')
+                        <small class="text-danger">{{$message}}</small>
+                        @enderror
                       </div>
                     </div>
                     <div class="form-group">
                       <label>Asignatura:</label>
-                      <input class="form-control" data-inputmask="'alias': 'nombre'" type="text" name="nombre"
-                        value="{{ isset($curso->nombre) ? $curso->nombre : '' }}" id="nombre">
+                      <input class="form-control" name="asignatura" value="{{old('asignatura')}}">
+                      @error('asignatura')
+                      <small class="text-danger">{{$message}}</small>
+                      @enderror
                     </div>
                     <div class="form-group row">
                       <div class="col">

@@ -12,7 +12,7 @@ class CursoController extends Controller
         //$cursos = Curso::orderBy('id')->paginate();
 
         $cursos['cursos'] = Curso::paginate(100);
-        
+
         //return view('cursos.index', compact('cursos'));
         return view('cursos.index', $cursos);
     }
@@ -25,33 +25,24 @@ class CursoController extends Controller
 
 
     public function store(Request $request){
-       
 
-        $campos = [
-            'codigoC' => 'required|string|max:20'
+        $request->validate([
+            'codigo'=>'required',
+            'area' => 'required',
+            'asignatura' => 'required',
 
-        ];
+        ]);
 
-        //$datosCurso = request()->all();
-        $datosCurso = request()->except('_token');
-        Curso::insert($datosCurso);
+        $curso = new Curso();
 
-        return redirect('cursos')->with("message", "Curso agregado satisfactoriamente");
-        //return response()->json($datosCurso);
-       /* $curso = new Curso();
-
-        $curso->codigoC = $request->codigo;
-        $curso->areaC = $request->area;
-        $curso->nombre = $request->nombre;
-        $curso->cicloC = $request->ciclo;
-        $curso->tipoC = $request->tipo;
-        $curso->horasP = $request->hp;
-        $curso->horasT = $request->ht;
-        $curso->horasTotales = $request->horastotales;
-    
+        $curso->codigo = $request->codigoC;
+        $curso->area = $request->areaC;
+        $curso->asignatura = $request->nombre;
+        
         $curso->save();
 
-        return redirect()->route('cursos.index'); */
+        return redirect()->route('cursos.index');
+
     }
 
     public function show($curso){
