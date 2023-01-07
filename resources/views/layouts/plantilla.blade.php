@@ -31,7 +31,8 @@
 
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Offcanvas dark navbar</a>
+        <img src="https://derecho.unap.edu.pe/storage/2019/05/unap_logo.svg" alt="Bootstrap" width="30" height="24">
+            <a class="navbar-brand" href="#">Sistema de Asignación de Horarios</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                 <span class="navbar-toggler-icon"></span>
