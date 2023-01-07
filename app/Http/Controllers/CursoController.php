@@ -30,18 +30,28 @@ class CursoController extends Controller
             'codigo'=>'required',
             'area' => 'required',
             'asignatura' => 'required',
-
+            'ciclo' => 'required',
+            'tipo' => 'required',
+            'horasT' => 'required|numeric',
+            'horasP' => 'required|numeric',
+            'horasTotales' => 'required|numeric'
         ]);
 
         $curso = new Curso();
-
+        
         $curso->codigo = $request->codigoC;
         $curso->area = $request->areaC;
         $curso->asignatura = $request->nombre;
+        $curso->ciclo = $request->cicloC;
+        $curso->tipo = $request->tipoC;
+        $curso->horasT = $request->horasT;
+        $curso->horasP = $request->horasP;
+        $curso->horasTotales = $request->horasTotales;
         
+    
         $curso->save();
 
-        return redirect()->route('cursos.index');
+        return redirect()->back();
 
     }
 

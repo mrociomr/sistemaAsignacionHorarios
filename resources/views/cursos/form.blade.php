@@ -35,34 +35,44 @@
                     <div class="form-group row">
                       <div class="col">
                         <label>Ciclo:</label>
-                        <input class="form-control" data-inputmask="'alias': 'email'" type="text" name="cicloC"
-                        value="{{ isset($curso->cicloC) ? $curso->cicloC : '' }}" id="ciclo">
+                        <input class="form-control" name="ciclo" value="{{old('ciclo')}}" >
+                      @error('ciclo')
+                      <small class="text-danger">{{$message}}</small>
+                      @enderror
                       </div>
                       <div class="col">
                         <label>Tipo: </label>
-                        <input class="form-control" data-inputmask="'alias': 'ip'"  type="text" name="tipoC"
-                        value="{{ isset($curso->tipoC) ? $curso->tipoC : '' }}" id="tipo" >
+                        <input class="form-control"  name="tipo" value="{{old('tipo')}}" >
+                        @error('tipo')
+                        <small class="text-danger">{{$message}}</small>
+                        @enderror
                       </div>
                     </div>
                     <div class="form-group row">
                       <div class="col">
                         <label>Horas Teóricas:</label>
 
-                        <input class="form-control" data-inputmask="'alias': 'email'" type="number" name="horasT"
-                        value="{{ isset($curso->horasT) ? $curso->horasT : '' }} " id="ht">
+                        <input class="form-control" name="horasT" value="{{old('horasT')}}" type="number">
+                        @error('horasT')
+                        <small class="text-danger">{{$message}}</small>
+                        @enderror
                       </div>
                       <div class="col">
                         <label>Horas Prácticas: </label>
 
-                        <input class="form-control" data-inputmask="'alias': 'ip'" type="number" name="horasP"
-                        value="{{ isset($curso->horasP) ? $curso->horasP : '' }} " id="hp">
+                        <input class="form-control" name="horasP" value="{{old('horasP')}}" type="number">
+                        @error('horasP')
+                        <small class="text-danger">{{$message}}</small>
+                        @enderror
                       </div>
                     </div>
                     <div class="form-group">
                       <label>Horas Totales:</label>
 
-                      <input class="form-control" data-inputmask="'alias': 'currency'" style="text-align: left;" type="number" name="horasTotales"
-                        value="{{ isset($curso->horasTotales) ? $curso->horasTotales : '' }} " id="horasTotales">
+                      <input class="form-control" name="horasTotales" value="{{old('horasTotales')}}" type="number">
+                        @error('horasTotales')
+                        <small class="text-danger">{{$message}}</small>
+                        @enderror
                     </div>
                     <br>
 
