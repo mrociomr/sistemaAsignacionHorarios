@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,43 +17,66 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Istok+Web&family=K2D:wght@100&family=Karla&family=PT+Sans&display=swap');
     </style>
-
-
-
+    <script src="https://kit.fontawesome.com/49d967e6a5.js" crossorigin="anonymous"></script>   
+    
 </head>
-
 <body>
     <div class="container-fluid">
-
         <div class="row">
             <!-- Image and text -->
-            <nav class="navbar navbar-light bg-light">
-                <a class="navbar-brand" href="#">
-                <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-                Bootstrap
-                </a>
-            </nav>
-
-
+            <nav class="navbar navbar-expand-lg navbar-light bg-white"  style="background: rgb(9,9,121);
+background: radial-gradient(circle, rgba(9,9,121,1) 0%, rgba(34,31,119,1) 0%, rgba(27,29,84,1) 0%, rgba(33,50,54,1) 100%, rgba(12,16,81,1) 100%, rgba(2,0,36,1) 100%);">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+          <img
+          src="{{asset( 'images/logounap.jpg' )}}""
+          style="height: 79px; margin-left: -10px; width: 220px;"
+          />
+        </a>
+        <!-- Left links -->
+        <div class="navbar-nav me-auto mb-2 mb-lg-0">
+          <div class="nav-item">
+            <a class="nav-link font" style="color: rgb(255, 255, 255);   font-size: 27px;
+            ">SISTEMA DE ASIGNACIÓN DE HORARIO</a>
+          </div>
+        </div>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+        <div class="dropdown">
+          
+            <img
+              src="{{asset( 'images/logosistemas.png' )}}"
+              style="height: 55px; margin-left: -10px; width: 50px;"
+            />
+            
+          </a>
+        </div>
+      </div>
+      <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
 
 
         <div class="row">
         <div class="col-3">
-        
         <br>
-        
-
         <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                 <svg class="bi pe-none me-2" width="40" height="32">
                     <use xlink:href="#bootstrap"></use>
                 </svg>
-                <span class="fs-4">MÓDULOS</span>
             </a>
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item">
-                    <a href="#" class="nav-link active" aria-current="page">
+                    <a href="/" class="nav-link active" aria-current="page">
                         <svg class="bi pe-none me-2" width="16" height="16">
                             <use xlink:href="#home"></use>
                         </svg>
@@ -70,7 +92,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link text-white">
+                    <a href="{{url('cursos')}}" class="nav-link text-white">
                         <svg class="bi pe-none me-2" width="16" height="16">
                             <use xlink:href="#table"></use>
                         </svg>
@@ -119,80 +141,9 @@
 
 
 
-        <!--
+        
 
-    <header>
-    <div class="row">
-                <div class="col-2">
-                    <img src="{{ asset('images/logounap.jpg') }}" alt="Logo Universidad Nacional del Altiplano Puno" width="200" height="60">
-                </div>
-                <div class="col-10">
-                    <nav class="navbar" role="navigation" aria-label="main navigation">
-                        <div class="navbar-brand">
-                            <a class="navbar-item" href="#"> SISTEMA DE ASIGNACIÓN DE HORARIO</a>
-                        </div>
-                    <div>
-                        <img src="{{ asset('images/logosistemas.png') }}" alt="Logo Ingeniería de Sistemas" width="50" height="50">
-                    </div>
-                    </nav>
-                </div>
-        </div>
-    </header>
-    <div class="container">
-    <!--  <div class="row">
-                <div class="col-2">
-                    <img src="{{ asset('images/logounap.jpg') }}" alt="Logo Universidad Nacional del Altiplano Puno" width="200" height="50">
-                </div>
-                <div class="col-10">
-                    <nav class="navbar" role="navigation" aria-label="main navigation">
-                        <div class="navbar-brand">
-                            <a class="navbar-item" href="#"> SISTEMA DE ASIGNACIÓN DE HORARIO</a>
-                        </div>
-                    <div>
-                        <img src="{{ asset('images/logosistemas.png') }}" alt="Logo Ingeniería de Sistemas" width="80" height="50">
-                    </div>
-                    </nav>
-                </div>
-        </div>
-    </div>-->
-        <!--<div class="row">
-            <div class="col-2 col-sm-1">
-                Sidebar
-            </div>
-            <div class="col-10 col-sm-11" style="background-color: white;">
-                Cabana Perez
-            </div>
-        </div> -->
-
-
-
-        <!--<header class="encabezado">
-       
-        <nav class="navbar is-link" role="navigation" aria-label="main navigation">
-            <div>
-                <img src="{{ asset('images/logounap.jpg') }}" alt="Logo Universidad Nacional del Altiplano Puno" width="200" height="50">
-            </div>
-            <div class="navbar-brand">
-                <a class="navbar-item" href="#"> SISTEMA DE ASIGNACIÓN DE HORARIO
-                </a>
-
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                </a>
-            </div>
-            <div>
-                <img src="{{ asset('images/logosistemas.png') }}" alt="Logo Ingeniería de Sistemas" width="80" height="50">
-            </div>
-
-            
-        </nav>
-    </header>
-
-    <main class="contenido">
-
-    </main> -->
+  
     <div class="col-9">
         @yield('content')
     </div>
@@ -237,8 +188,11 @@
     table.buttons().container()
         .appendTo( '#example_wrapper .col-md-6:eq(0)' );
 });
+
+
             
     </script>
+
 </body>
 
 </html>
