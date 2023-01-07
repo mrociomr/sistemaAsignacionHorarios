@@ -15,16 +15,10 @@
     <div class="columns">
         <h1>Cursos</h1>
         <!---CAMPO BUSCAR-->
-        <div class="panel-block">
-            <p class="control has-icons-left">
-                <input class="input is-info" type="text" placeholder="Buscar">
-                <span class="icon is-right">
-                    <i class="fas fa-search" aria-hidden="true"></i>
-                </span>
-            </p>
-        </div>
+        <br>
         <!--BOTÓN AGREGAR CURSO -->
         <a class="btn btn-success" href="{{ url('cursos/create') }}" role="button">Agregar curso</a>
+        <br>
         <br>
 
 
