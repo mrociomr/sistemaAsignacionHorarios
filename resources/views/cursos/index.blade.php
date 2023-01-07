@@ -29,7 +29,7 @@
 
 
         <!------------TABLA CURSOS-------------->
-        <table id="example" class="table table-striped nowrap" style="width:100%">
+        <table id="example" class="table table-striped table-bordered nowrap dataTable no-footer dtr-inline collapsed" style="width: 100%;" aria-describedby="example_info">
             <thead>
                 <tr>
                     <th scope="col">N°</th>

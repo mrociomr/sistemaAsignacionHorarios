@@ -15,10 +15,13 @@
         href="https://fonts.googleapis.com/css2?family=Istok+Web&family=K2D:wght@100&family=Karla&family=PT+Sans&display=swap"
         rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.3.1/css/fixedHeader.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.bootstrap.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Istok+Web&family=K2D:wght@100&family=Karla&family=PT+Sans&display=swap');
     </style>
-
+    
 
 
 </head>
@@ -210,34 +213,19 @@
     </script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
     <script>
-            $(document).ready(function() {
-    var table = $('#example').DataTable({
-        buttons:[
-            {
-                extend: 'createState',
-                config: {
-                    creationModal: true,
-                    toggle: {
-                        columns:{
-                            search: true,
-                            visible: true
-                        },
-                        length: true,
-                        order: true,
-                        paging: true,
-                        search: true,
-                    }
-                }
-            },
-            'savedStates'
-        ],
-        lengthChange: false
-    });
- 
-    table.buttons().container()
-        .appendTo( '#example_wrapper .col-md-6:eq(0)' );
-});
-            
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/fixedheader/3.3.1/js/dataTables.fixedHeader.min.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.4.0/js/responsive.bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        var table = $('#example').DataTable( {
+                responsive: true
+        } );
+        
+            new $.fn.dataTable.FixedHeader(table);
+    } );
+    
+
     </script>
 </body>
 
