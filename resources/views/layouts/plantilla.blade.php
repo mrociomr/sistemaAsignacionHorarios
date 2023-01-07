@@ -158,7 +158,11 @@
             <script>
                 $(document).ready(function() {
                     var table = $('#example').DataTable({
-                        responsive: true
+                        responsive: true,
+                        autoWidth: false,
+                        "language": {
+                            "url": "{{asset("idioma/es_dtable.json")}}"
+                        }
                     });
 
                     new $.fn.dataTable.FixedHeader(table);

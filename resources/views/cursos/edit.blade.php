@@ -22,7 +22,7 @@
                 <label>Área Curricular:</label>
                 {{-- <input class="form-control" name="area" value="{{old('area')}}"> --}}
                 <select class="form-select" name="area" value="{{old('area')}}" aria-label="Example select with button addon">
-                  <option selected>Seleccionar...</option>
+                  <option  value="">Seleccionar...</option>
                   <option value="General" {{ old('area', $curso->areaC) == 'General' ? 'selected' : '' }}>General</option>
                   <option value="Especifico" {{ old('area', $curso->areaC) == 'Especifico' ? 'selected' : '' }}>Especifico</option>
                   <option value="Especialidad" {{ old('area', $curso->areaC) == 'Especialidad' ? 'selected' : '' }}>Especialidad</option>
@@ -44,7 +44,7 @@
                 <label>Ciclo:</label>
                 {{-- <input class="form-control" name="ciclo" value="{{old('ciclo')}}" > --}}
                 <select class="form-select" name="ciclo" value="{{old('ciclo')}}"  aria-label="Example select with button addon">
-                  <option selected>Seleccionar...</option>
+                  <option  value="">Seleccionar...</option>
                   <option value="I" {{ old('ciclo', $curso->cicloC) == 'I' ? 'selected' : '' }}>I Semestre</option>
                   <option value="II" {{ old('ciclo', $curso->cicloC) == 'II' ? 'selected' : '' }}>II Semestre</option>
                   <option value="III" {{ old('ciclo', $curso->cicloC) == 'III' ? 'selected' : '' }}>III Semestre</option>
@@ -64,7 +64,7 @@
                 <label>Tipo: </label>
                 {{-- <input class="form-control"  name="tipo" value="{{old('tipo')}}" > --}}
                 <select class="form-select" name="tipo" value="{{old('tipo')}}" aria-label="Example select with button addon">
-                  <option selected>Seleccionar...</option>
+                  <option  value="">Seleccionar...</option>
                   <option value="Obligatorio" {{ old('tipo', $curso->tipoC) == 'Obligatorio' ? 'selected' : '' }}>Obligatorio</option>
                   <option value="Electivo" {{ old('tipo', $curso->tipoC) == 'Electivo' ? 'selected' : '' }}>Electivo</option>
                 </select>

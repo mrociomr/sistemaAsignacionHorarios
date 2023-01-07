@@ -21,7 +21,7 @@
                         <label>Área Curricular:</label>
                         {{-- <input class="form-control" name="area" value="{{old('area')}}"> --}}
                         <select class="form-select" name="area" value="{{old('area')}}" aria-label="Example select with button addon">
-                          <option selected>Seleccionar...</option>
+                          <option value="">Seleccionar...</option>
                           <option value="General">General</option>
                           <option value="Especifico">Especifico</option>
                           <option value="Especialidad">Especialidad</option>
@@ -43,7 +43,7 @@
                         <label>Ciclo:</label>
                         {{-- <input class="form-control" name="ciclo" value="{{old('ciclo')}}" > --}}
                         <select class="form-select" name="ciclo" value="{{old('ciclo')}}"  aria-label="Example select with button addon">
-                          <option selected>Seleccionar...</option>
+                          <option  value="">Seleccionar...</option>
                           <option value="I">I Semestre</option>
                           <option value="II">II Semestre</option>
                           <option value="III">III Semestre</option>
@@ -63,7 +63,7 @@
                         <label>Tipo: </label>
                         {{-- <input class="form-control"  name="tipo" value="{{old('tipo')}}" > --}}
                         <select class="form-select" name="tipo" value="{{old('tipo')}}" aria-label="Example select with button addon">
-                          <option selected>Seleccionar...</option>
+                          <option  value="">Seleccionar...</option>
                           <option value="Obligatorio">Obligatorio</option>
                           <option value="Electivo">Electivo</option>
                         </select>
