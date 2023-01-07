@@ -35,3 +35,6 @@ Route::controller(CursoController::class)->group(function(){
     Route::get('cursos/{curso}', 'show');
 });
 */
+
+
+Route::resource('docentes', DocenteController::class);
