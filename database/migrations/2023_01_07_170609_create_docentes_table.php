@@ -24,8 +24,7 @@ class CreateDocentesTable extends Migration
             $table->enum("categoriaD", ["Principal", "Asociado", "Auxiliar"]);
             $table->integer('celularD');
             $table->string('correoD');
-            //$table->time("HorasLectivas");
-            //$table->time("HorasNoLectivas");
+            
             $table->timestamps();
         });
     }

@@ -36,7 +36,7 @@ class DocenteController extends Controller
         $request->validate([
             'dni'=>'required',
             'grado'=>'required',
-            'nombres' => 'required',
+            'nombre' => 'required',
             'apellidos' => 'required',
             'tipoD' => 'required',
             'cargo' => 'required',
@@ -49,7 +49,7 @@ class DocenteController extends Controller
         
         $docente->dniD = $request->dni;
         $docente->gradoD = $request->grado;
-        $docente->nombresD = $request->nombres;
+        $docente->nombresD = $request->nombre;
         $docente->apellidosD = $request->apellidos;
         $docente->tipoD = $request->tipoD;
         $docente->cargoD = $request->cargo;
@@ -75,14 +75,14 @@ class DocenteController extends Controller
     }
 
   
-    public function update(Request $request, Curso $docente){
+    public function update(Request $request, Docente $docente){
        
         $request->validate([
             'dni'=>'required',
             'grado'=>'required',
-            'nombres' => 'required',
+            'nombre' => 'required',
             'apellidos' => 'required',
-            'tipo' => 'required',
+            'tipoD' => 'required',
             'categoria' => 'required',
             'cargo' => 'required',
             'celular' => 'required',
@@ -92,9 +92,9 @@ class DocenteController extends Controller
         
         $docente->dniD = $request->dni;
         $docente->gradoD = $request->grado;
-        $docente->nombresD = $request->nombres;
+        $docente->nombresD = $request->nombre;
         $docente->apellidosD = $request->apellidos;
-        $docente->tipoD = $request->tipo;
+        $docente->tipoD = $request->tipoD;
         $docente->categoriaD = $request->categoria;
         $docente->cargoD = $request->cargo;
         $docente->celularD = $request->celular;
@@ -109,7 +109,7 @@ class DocenteController extends Controller
    
     public function destroy($id)
     {
-        Curso::destroy($id);
+        Docente::destroy($id);
 
        return redirect('docentes')->with('eliminar', 'delete');
     }

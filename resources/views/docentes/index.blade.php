@@ -32,7 +32,7 @@
                     <th scope="col">N°</th>
                     <th scope="col">DNI</th>
                     <th scope="col">Grado</th>
-                    <th scope="col">Nombres</th>
+                    <th scope="col">Nombre(s)</th>
                     <th scope="col">Apellidos</th>
                     <th scope="col">Categoria</th>
                     <th scope="col">Tipo</th>
@@ -129,7 +129,7 @@ $('.eliminar').submit(function(e){
         // Update the modal's content.
         const modalTitle = deleteModal.querySelector('.modal-title')
 
-        modalTitle.textContent = `Se eliminará el curso: ${recipient}`
+        modalTitle.textContent = `Se eliminará el docente: ${recipient}`
         
         })
 

@@ -27,7 +27,7 @@
                     </div>
                     <div class="form-group">
                       <div class="col">
-                        <label class="label">Nombre (s): </label>
+                        <label class="label">Nombre(s): </label>
                         <input class="form-control" name="nombre" value="{{old('nombre')}}">
                         @error('nombre')
                         <small class="text-danger">{{$message}}</small>
