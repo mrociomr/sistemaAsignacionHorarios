@@ -20,7 +20,7 @@
         <br>
 
         <!--BOTÓN AGREGAR CURSO -->
-        <a class="btn btn-success" href="{{ url('cursos/create') }}" role="button">....<span class="fa-regular fa-file-plus"></span></a>
+        <a class="btn btn-success" href="{{ url('cursos/create') }}" role="button">Añadir nuevo <i class="fa-solid fa-plus"></i></a>
         <br>
         <br>
 
