@@ -131,6 +131,7 @@
                     new $.fn.dataTable.FixedHeader(table);
                 });
             </script>
+            <script src="https://kit.fontawesome.com/49d967e6a5.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
