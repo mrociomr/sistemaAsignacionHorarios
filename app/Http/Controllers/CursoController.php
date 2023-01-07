@@ -11,10 +11,6 @@ class CursoController extends Controller
         
         //$cursos = Curso::orderBy('id')->paginate();
         $cursos['cursos'] = Curso::paginate(100);
-
-        $cursos['cursos'] = Curso::paginate(30);
-
-
         //return view('cursos.index', compact('cursos'));
         return view('cursos.index', $cursos);
     }
