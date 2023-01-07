@@ -41,18 +41,30 @@
                     <div class="form-group row">
                       <div class="col">
                         <label>Horas Teóricas:</label>
+<<<<<<< HEAD
                         <input class="form-control" data-inputmask="'alias': 'email'" type="text" name="horasT"
+=======
+                        <input class="form-control" data-inputmask="'alias': 'email'" type="number" name="horasT"
+>>>>>>> f88c480d532758aef219dd3344ff7c1f6c318ae4
                         value="{{ isset($curso->horasT) ? $curso->horasT : '' }} " id="ht">
                       </div>
                       <div class="col">
                         <label>Horas Prácticas: </label>
+<<<<<<< HEAD
                         <input class="form-control" data-inputmask="'alias': 'ip'" type="text" name="horasP"
+=======
+                        <input class="form-control" data-inputmask="'alias': 'ip'" type="number" name="horasP"
+>>>>>>> f88c480d532758aef219dd3344ff7c1f6c318ae4
                         value="{{ isset($curso->horasP) ? $curso->horasP : '' }} " id="hp">
                       </div>
                     </div>
                     <div class="form-group">
                       <label>Horas Totales:</label>
+<<<<<<< HEAD
                       <input class="form-control" data-inputmask="'alias': 'currency'" style="text-align: left;" type="text" name="horasTotales"
+=======
+                      <input class="form-control" data-inputmask="'alias': 'currency'" style="text-align: left;" type="number" name="horasTotales"
+>>>>>>> f88c480d532758aef219dd3344ff7c1f6c318ae4
                         value="{{ isset($curso->horasTotales) ? $curso->horasTotales : '' }} " id="horasTotales">
                     </div>
                     <br>

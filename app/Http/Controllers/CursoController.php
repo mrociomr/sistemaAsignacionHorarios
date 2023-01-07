@@ -10,8 +10,12 @@ class CursoController extends Controller
     public function index(){
         
         //$cursos = Curso::orderBy('id')->paginate();
+<<<<<<< HEAD
         $cursos['cursos'] = Curso::paginate(10);
 
+=======
+        $cursos['cursos'] = Curso::paginate(100);
+>>>>>>> f88c480d532758aef219dd3344ff7c1f6c318ae4
         //return view('cursos.index', compact('cursos'));
         return view('cursos.index', $cursos);
     }
@@ -31,7 +35,11 @@ class CursoController extends Controller
 
         ];
 
+<<<<<<< HEAD
         
+=======
+                
+>>>>>>> f88c480d532758aef219dd3344ff7c1f6c318ae4
         //$datosCurso = request()->all();
         $datosCurso = request()->except('_token');
         Curso::insert($datosCurso);

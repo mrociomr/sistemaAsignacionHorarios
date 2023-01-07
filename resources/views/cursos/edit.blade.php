@@ -11,5 +11,6 @@
         {{ method_field('PATCH') }}
 
         @include('cursos.form', ['modo' => 'Editar']);
+
     </form>
 @endsection
