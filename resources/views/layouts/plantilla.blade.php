@@ -23,6 +23,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Istok+Web&family=K2D:wght@100&family=Karla&family=PT+Sans&display=swap');
     </style>
+    <script src="https://kit.fontawesome.com/49d967e6a5.js" crossorigin="anonymous"></script>
 
 
 
