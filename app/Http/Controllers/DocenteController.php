@@ -38,9 +38,9 @@ class DocenteController extends Controller
             'grado'=>'required',
             'nombres' => 'required',
             'apellidos' => 'required',
-            'tipo' => 'required',
-            'categoria' => 'required',
+            'tipoD' => 'required',
             'cargo' => 'required',
+            'categoria' => 'required',
             'celular' => 'required',
             'correo' => 'required'
         ]);
@@ -51,9 +51,9 @@ class DocenteController extends Controller
         $docente->gradoD = $request->grado;
         $docente->nombresD = $request->nombres;
         $docente->apellidosD = $request->apellidos;
-        $docente->tipoD = $request->tipo;
-        $docente->categoriaD = $request->categoria;
+        $docente->tipoD = $request->tipoD;
         $docente->cargoD = $request->cargo;
+        $docente->categoriaD = $request->categoria;
         $docente->celularD = $request->celular;
         $docente->correoD = $request->correo;
     

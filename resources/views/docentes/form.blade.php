@@ -68,9 +68,9 @@
                         {{-- <input class="form-control" name="categoria" value="{{old('categoria')}}" > --}}
                         <select class="form-select" name="categoria" value="{{old('categoria')}}"  aria-label="Example select with button addon">
                           <option selected>Seleccionar...</option>
-                          <option value="principal">Principal</option>
-                          <option value="asociado">Asociado</option>
-                          <option value="auxiliar">Auxiliar</option>
+                          <option value="Principal">Principal</option>
+                          <option value="Asociado">Asociado</option>
+                          <option value="Auxiliar">Auxiliar</option>
                         </select>
                       @error('categoria')
                       <small class="text-danger">{{$message}}</small>

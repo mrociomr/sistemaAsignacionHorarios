@@ -8,7 +8,7 @@
     <a href="{{ route('docentes.index') }}"><span class="fa-solid fa-chevron-left"></span></a>
 
 
-    <form action="{{ route('docentes.store') }}" method="post" class="form-horizontal from-create">
+    <form action="{{ route('docentes.store') }}" method="post" class="form-horizontal from-create" method="POST">
 
         @csrf
         @include('docentes.form', ['modo' => 'Crear'])
