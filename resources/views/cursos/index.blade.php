@@ -12,7 +12,7 @@
     <div class="columns">
 
 
-        <h1>Cursos</h1>
+        <h3>Cursos</h3>
         <!---CAMPO BUSCAR-->
         <br>
 

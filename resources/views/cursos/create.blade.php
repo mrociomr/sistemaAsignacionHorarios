@@ -11,7 +11,7 @@
     <form action="{{ route('cursos.store') }}" method="post" class="form-horizontal from-create" method="POST">
 
         @csrf
-        @include('cursos.form', ['modo' => 'Crear']);
+        @include('cursos.form', ['modo' => 'Crear'])
 
     </form>
     </div>

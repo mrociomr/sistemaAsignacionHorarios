@@ -39,11 +39,11 @@ class CursoController extends Controller
 
         $curso = new Curso();
         
-        $curso->codigo = $request->codigoC;
-        $curso->area = $request->areaC;
-        $curso->asignatura = $request->nombre;
-        $curso->ciclo = $request->cicloC;
-        $curso->tipo = $request->tipoC;
+        $curso->codigoC = $request->codigo;
+        $curso->areaC = $request->area;
+        $curso->nombre = $request->asignatura;
+        $curso->cicloC = $request->ciclo;
+        $curso->tipoC = $request->tipo;
         $curso->horasT = $request->horasT;
         $curso->horasP = $request->horasP;
         $curso->horasTotales = $request->horasTotales;
@@ -51,7 +51,7 @@ class CursoController extends Controller
     
         $curso->save();
 
-        return redirect()->back();
+        return redirect()->route('cursos.index');
 
     }
 
@@ -60,17 +60,38 @@ class CursoController extends Controller
     }
 
 
-    public function edit($id){
-        $curso = Curso::findOrFail($id);
+    public function edit(Curso $curso){
+        
         return view('cursos.edit', compact('curso'));        
     }
 
-    public function update(Request $request, $id){
-        $datosCurso = request()->except(['_token', '_method']);
-        Curso::where('id','=',$id)->update($datosCurso);
+    public function update(Request $request, Curso $curso){
+       
+        $request->validate([
+            'codigo'=>'required',
+            'area' => 'required',
+            'asignatura' => 'required',
+            'ciclo' => 'required',
+            'tipo' => 'required',
+            'horasT' => 'required|numeric',
+            'horasP' => 'required|numeric',
+            'horasTotales' => 'required|numeric'
+        ]);
 
-        $curso = Curso::findOrFail($id);
-        return view('cursos.edit', compact('curso'));   
+        
+        $curso->codigoC = $request->codigo;
+        $curso->areaC = $request->area;
+        $curso->nombre = $request->asignatura;
+        $curso->cicloC = $request->ciclo;
+        $curso->tipoC = $request->tipo;
+        $curso->horasT = $request->horasT;
+        $curso->horasP = $request->horasP;
+        $curso->horasTotales = $request->horasTotales;
+        
+    
+        $curso->save();
+
+        return redirect()->route('cursos.index');  
     }
 
 
