@@ -76,7 +76,7 @@ class CursoController extends Controller
 
        Curso::destroy($id);
 
-       return redirect('cursos')->with('destroy', 'Curso eliminado');
+       return redirect('cursos')->with('eliminar', 'delete');
 
         
     }

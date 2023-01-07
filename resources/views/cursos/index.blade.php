@@ -59,13 +59,8 @@
                             <a class="btn btn-light btn-sm" href="{{ url('/cursos/' . $curso->id . '/edit') }}"
                                 role="button"><span class="fa-solid fa-pen-to-square" ></span></a>
 
-                            <button type="submit" class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-id="{{$curso->id}}">
-                                <span class="fa-solid fa-trash"></span>    
-                            </button>
 
-                            <form action="{{ url('/cursos/' . $curso->id) }}" method="post">
-                                @csrf
-                                {{ method_field('DELETE') }}
+                            <form action="{{route('cursos.destroy', $curso)}}" method="post" style="display: inline" class="eliminar"> @csrf @method('delete') <button type="submit" class="btn btn-outline-danger btn-sm"><i class="fa-solid fa-trash"></i> </button></form>
                              
                         </td>
                     </tr>
@@ -77,7 +72,7 @@
     </div>
 
 <!------MODAL DE CONFIRMACIÓN-------------->
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+{{-- <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -89,20 +84,68 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <form id="formDelete" action="{{route('cursos.destroy', 1)}}" data-action="{{route('cursos.destroy', 1)}}" method="POST">
+        <form action="{{route('cursos.destroy', $curso)}}" method="POST">
             @csrf @method('DELETE')
-            <button type="submit" class="btn btn-danger ">Eliminar</button>
+            <button type="submit" class="btn btn-danger delete">Eliminar</button>
         </form>
         
       </div>
     </div>
    </div>
-</div>
+</div> --}}
 </div>
 
 <!--- MODAL CONFIRMACION JS -->
+
+
+
+
+
+    <!--
+        <a href="{{ route('cursos.create') }}">Agregar curso</a>
+        <ul>
+            @foreach ($cursos as $curso)
+    <li>{{ $curso->nombre }}</li>
+    @endforeach
+        </ul>
+
+        {{ $cursos->links() }} -->
+        
+@endsection
+
+
+@section('js')
+@if(session('eliminar') == 'delete')
 <script>
-            
+ Swal.fire(
+          '¡Eliminado!',
+          'El registro ha sido eliminado.',
+          'success'
+        )
+</script>
+@endif
+<script>
+
+$('.eliminar').submit(function(e){
+    e.preventDefault();
+    Swal.fire({
+      title: '¿Estas seguro?',
+      text: "No podrás revertir esto!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: '¡Si, eliminarlo!',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.submit();
+      }
+    })
+  });
+</script>
+
+<script>
         const deleteModal = document.getElementById('deleteModal')
         deleteModal.addEventListener('show.bs.modal', event => {
         // Button that triggered the modal
@@ -130,18 +173,4 @@
             $('#mensaje').fadeOut(1000);
         }, 1000);
 </script>
-
-
-
-
-    <!--
-        <a href="{{ route('cursos.create') }}">Agregar curso</a>
-        <ul>
-            @foreach ($cursos as $curso)
-    <li>{{ $curso->nombre }}</li>
-    @endforeach
-        </ul>
-
-        {{ $cursos->links() }} -->
-        
 @endsection

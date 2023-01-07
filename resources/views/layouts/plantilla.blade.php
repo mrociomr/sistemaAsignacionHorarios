@@ -24,6 +24,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Istok+Web&family=K2D:wght@100&family=Karla&family=PT+Sans&display=swap');
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css" />
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
 
 </head>
 
@@ -134,7 +135,7 @@
                     </div>
                 </div>
             </div>
-
+            
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
@@ -146,15 +147,13 @@
                 integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous">
             </script>
             <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
-            <script>
-                < script type = "text/javascript"
-                language = "javascript"
-                src = "https://cdn.datatables.net/fixedheader/3.3.1/js/dataTables.fixedHeader.min.js" >
-            </script>
+            <script type = "text/javascript" language = "javascript" src = "https://cdn.datatables.net/fixedheader/3.3.1/js/dataTables.fixedHeader.min.js" ></script>
             <script type="text/javascript" language="javascript"
                 src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"></script>
             <script type="text/javascript" language="javascript"
                 src="https://cdn.datatables.net/responsive/2.4.0/js/responsive.bootstrap.min.js"></script>
+                <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
             <script>
                 $(document).ready(function() {
                     var table = $('#example').DataTable({
@@ -165,6 +164,7 @@
                 });
             </script>
             <script src="https://kit.fontawesome.com/49d967e6a5.js" crossorigin="anonymous"></script>
+            @yield('js')
 </body>
 
 </html>
