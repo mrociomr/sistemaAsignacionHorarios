@@ -14,115 +14,98 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Istok+Web&family=K2D:wght@100&family=Karla&family=PT+Sans&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.3.1/css/fixedHeader.bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/fixedheader/3.3.1/css/fixedHeader.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.bootstrap.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Istok+Web&family=K2D:wght@100&family=Karla&family=PT+Sans&display=swap');
     </style>
-    
+
 
 
 </head>
 
 <body>
-    <div class="container-fluid">
 
-        <div class="row">
-            <!-- Image and text -->
-            <nav class="navbar navbar-light bg-light">
-                <a class="navbar-brand" href="#">
-                <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-                Bootstrap
-                </a>
+<nav class="navbar navbar-dark bg-dark fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Offcanvas dark navbar</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                        aria-labelledby="offcanvasDarkNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Docentes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Cursos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Horas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Aulas y Laboratorios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Horarios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Reportes</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Dropdown
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <form class="d-flex mt-3" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search"
+                                    aria-label="Search">
+                                <button class="btn btn-success" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </nav>
-
-
-
+    <div class="container pt">
 
         <div class="row">
-        <div class="col-3">
-        
-        <br>
-        
-
-        <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                <svg class="bi pe-none me-2" width="40" height="32">
-                    <use xlink:href="#bootstrap"></use>
-                </svg>
-                <span class="fs-4">MÓDULOS</span>
-            </a>
-            <hr>
-            <ul class="nav nav-pills flex-column mb-auto">
-                <li class="nav-item">
-                    <a href="#" class="nav-link active" aria-current="page">
-                        <svg class="bi pe-none me-2" width="16" height="16">
-                            <use xlink:href="#home"></use>
-                        </svg>
-                        Inicio
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link text-white">
-                        <svg class="bi pe-none me-2" width="16" height="16">
-                            <use xlink:href="#speedometer2"></use>
-                        </svg>
-                        Docentes
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link text-white">
-                        <svg class="bi pe-none me-2" width="16" height="16">
-                            <use xlink:href="#table"></use>
-                        </svg>
-                        Cursos
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link text-white">
-                        <svg class="bi pe-none me-2" width="16" height="16">
-                            <use xlink:href="#grid"></use>
-                        </svg>
-                        Horas
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link text-white">
-                        <svg class="bi pe-none me-2" width="16" height="16">
-                            <use xlink:href="#people-circle"></use>
-                        </svg>
-                        Aulas y Laboratorios
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link text-white">
-                        <svg class="bi pe-none me-2" width="16" height="16">
-                            <use xlink:href="#people-circle"></use>
-                        </svg>
-                        Horarios
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link text-white">
-                        <svg class="bi pe-none me-2" width="16" height="16">
-                            <use xlink:href="#people-circle"></use>
-                        </svg>
-                        Reportes
-                    </a>
-                </li>
-            </ul>
-            <hr>
-
-        </div>
-
-        </div>
+           
 
 
 
 
-        <!--
+         
+                
+
+
+
+
+                <!--
 
     <header>
     <div class="row">
@@ -158,7 +141,7 @@
                 </div>
         </div>
     </div>-->
-        <!--<div class="row">
+                <!--<div class="row">
             <div class="col-2 col-sm-1">
                 Sidebar
             </div>
@@ -169,7 +152,7 @@
 
 
 
-        <!--<header class="encabezado">
+                <!--<header class="encabezado">
        
         <nav class="navbar is-link" role="navigation" aria-label="main navigation">
             <div>
@@ -196,37 +179,39 @@
     <main class="contenido">
 
     </main> -->
-    <div class="col-9">
-        @yield('content')
-    </div>
-    </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
-        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous">
-    </script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
-    <script>
-    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/fixedheader/3.3.1/js/dataTables.fixedHeader.min.js"></script>
-    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"></script>
-    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.4.0/js/responsive.bootstrap.min.js"></script>
-    <script>
-    $(document).ready(function() {
-        var table = $('#example').DataTable( {
-                responsive: true
-        } );
-        
-            new $.fn.dataTable.FixedHeader(table);
-    } );
-    
+                    @yield('content')
+                
+            
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+            integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous">
+        </script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+        <script>
+            < script type = "text/javascript"
+            language = "javascript"
+            src = "https://cdn.datatables.net/fixedheader/3.3.1/js/dataTables.fixedHeader.min.js" >
+        </script>
+        <script type="text/javascript" language="javascript"
+            src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"></script>
+        <script type="text/javascript" language="javascript"
+            src="https://cdn.datatables.net/responsive/2.4.0/js/responsive.bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                var table = $('#example').DataTable({
+                    responsive: true
+                });
 
-    </script>
+                new $.fn.dataTable.FixedHeader(table);
+            });
+        </script>
 </body>
 
 </html>
