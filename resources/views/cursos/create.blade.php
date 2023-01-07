@@ -7,7 +7,7 @@
     <a href="{{ route('cursos.index') }}">Volver</a>
 
 
-    <form action="{{ route('cursos.store') }}" method="post">
+    <form action="{{ route('cursos.store') }}" method="post" class="form-horizontal from-create" method="POST">
 
         @csrf
         @include('cursos.form', ['modo' => 'Crear']);

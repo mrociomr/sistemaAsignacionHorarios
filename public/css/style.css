@@ -1,4 +1,8 @@
- .navbar-main,
+nav{
+    height: 80px;
+}
+
+.navbar-main,
  .sidebar-main {
      background: radial-gradient(#124073, #0b2c4f);
  }
@@ -30,3 +34,14 @@
  .card-principal {
      background-color: #FFFFFF;
  }
+
+ .titulo_una  {
+    color: #FFFFFF;
+    cursor: pointer;
+
+ }
+ .titlec:hover {
+    color: rgb(255, 255, 255);
+  }
+
+  
