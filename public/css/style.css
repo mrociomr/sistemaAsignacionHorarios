@@ -1,9 +1,9 @@
- .navbar-main,
- .sidebar-main {
-     background: radial-gradient(#124073, #0b2c4f);
- }
+nav{
+    height: 70px;
+}
+
  
- .navbar-title {
+ .font {
      font-family: 'Karla', sans-serif;
      color: #FFFFFF;
  }
@@ -30,3 +30,18 @@
  .card-principal {
      background-color: #FFFFFF;
  }
+
+.contenedor{
+    margin-top: 20px;
+    
+}
+
+
+ .titulo_una  {
+    color: #FFFFFF;
+    cursor: pointer;
+
+ }
+ .titlec:hover {
+    color: rgb(255, 255, 255);
+  }

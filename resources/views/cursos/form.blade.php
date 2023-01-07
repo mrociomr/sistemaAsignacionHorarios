@@ -1,82 +1,82 @@
 <!--<h1>{{ $modo }}</h1>-->
+<!---- FORM---->
 
-<div class="card-principal">
-    <form class="box">
-        <div class="field">
-            <label class="label">Código</label>
-            <div class="control">
-                <input class="input" type="text" name="codigoC" value="{{ isset($curso->codigoC) ? $curso->codigoC : '' }} "
+<div class="page-content page-container" id="page-content">
+    <div class="padding">
+        <div class="row container d-flex justify-content-center">
+<div class="col-lg-12 grid-margin stretch-card">
+              <!--form mask starts-->
+           
+                <div class="card-body">
+                  <form class="forms-sample">
+                    <div class="form-group row">
+                      <div class="col">
+                        <label class="label">Código: </label>
+                        <input class="form-control" data-inputmask="'alias': 'codigo'" type="text" name="codigoC" value="{{ isset($curso->codigoC) ? $curso->codigoC : '' }} "
                     id="codigoC">
-            </div>
-            <div class="field">
-                <label class="label">Área Curricular</label>
-                <div class="control">
-                    <div class="select is-normal">
-                        <select name="areaC" id="areaC">
-                            <option value="{{ isset($curso->areaC) ? $curso->areaC : '' }}">Seleccionar opción</option>
-                            @foreach ($areaC as $area)
-                                <option value="{{ $area['id'] }}">{{ $area['areaC'] }}</option>
-                                <!--este fue el cambio-->
-                            @endforeach
-                    </div>
-                    <input class="input" type="text" name="areaC"
+                      </div>
+                      <div class="col">
+                        <label>Área Curricular:</label>
+                        <input class="form-control" data-inputmask="'alias': 'areaC'" type="text" name="areaC"
                         value="{{ isset($curso->areaC) ? $curso->areaC : '' }}" id="areaC">
-                </div>
-            </div>
-            <div class="field">
-                <label class="label">Asignatura</label>
-                <div class="control">
-                    <input class="input" type="text" name="nombre"
-                        value="{{ isset($curso->nombre) ? $curso->nombre : '' }}" id="nombre">
-                </div>
-            </div>
-            <div class="field">
-                <label class="label">Ciclo</label>
-                <div class="control">
-                    <input class="input" type="text" name="cicloC"
-                        value="{{ isset($curso->cicloC) ? $curso->cicloC : '' }}" id="ciclo">
-                </div>
-            </div>
-            <div class="field">
-                <label class="label">Tipo</label>
-                <div class="control">
-                    <div class="select is-normal">
-                        <select>
-                            <option selected>Seleccionar opción</option>
-                            <option>Obligatorio</option>
-                            <option>Electivo</option>
-                        </select>
+                      </div>
                     </div>
-                    <input class="input" type="text" name="tipoC"
-                        value="{{ isset($curso->tipoC) ? $curso->tipoC : '' }}" id="tipo">
-                </div>
-            </div>
-            <div class="field">
-                <label class="label">Horas Teóricas</label>
-                <div class="control">
-                    <input class="input" type="text" name="horasT"
+                    <div class="form-group">
+                      <label>Asignatura:</label>
+                      <input class="form-control" data-inputmask="'alias': 'nombre'" type="text" name="nombre"
+                        value="{{ isset($curso->nombre) ? $curso->nombre : '' }}" id="nombre">
+                    </div>
+                    <div class="form-group row">
+                      <div class="col">
+                        <label>Ciclo:</label>
+                        <input class="form-control" data-inputmask="'alias': 'email'" type="text" name="cicloC"
+                        value="{{ isset($curso->cicloC) ? $curso->cicloC : '' }}" id="ciclo">
+                      </div>
+                      <div class="col">
+                        <label>Tipo: </label>
+                        <input class="form-control" data-inputmask="'alias': 'ip'"  type="text" name="tipoC"
+                        value="{{ isset($curso->tipoC) ? $curso->tipoC : '' }}" id="tipo" >
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col">
+                        <label>Horas Teóricas:</label>
+                        <input class="form-control" data-inputmask="'alias': 'email'" type="number" name="horasT"
                         value="{{ isset($curso->horasT) ? $curso->horasT : '' }} " id="ht">
-                </div>
-            </div>
-            <div class="field">
-                <label class="label">Horas Prácticas</label>
-                <div class="control">
-                    <input class="input" type="text" name="horasP"
+                      </div>
+                      <div class="col">
+                        <label>Horas Prácticas: </label>
+                        <input class="form-control" data-inputmask="'alias': 'ip'" type="number" name="horasP"
                         value="{{ isset($curso->horasP) ? $curso->horasP : '' }} " id="hp">
-                </div>
-            </div>
-            <div class="field">
-                <label class="label">Horas Totales</label>
-                <div class="control">
-                    <input class="input" type="text" name="horasTotales"
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Horas Totales:</label>
+                      <input class="form-control" data-inputmask="'alias': 'currency'" style="text-align: left;" type="number" name="horasTotales"
                         value="{{ isset($curso->horasTotales) ? $curso->horasTotales : '' }} " id="horasTotales">
+                    </div>
+                    <br>
+
+                    <input type="submit" value=" {{ $modo }} " class="btn btn-success">
+                    
+                  </form>
+                  
                 </div>
+         
+              <!--form mask ends-->
+            </div>
+            
+            </div>
+              </div>
+              <!--form mask ends-->
             </div>
 
-            <input type="submit" value=" {{ $modo }} " class="button is-success">
-            <!-- <button class="button is-primary">
-    
-  </button> -->
+
+
+
+
+<!---- FIN -->
+
     </form>
 
 </div>

@@ -10,7 +10,7 @@ class CursoController extends Controller
     public function index(){
         
         //$cursos = Curso::orderBy('id')->paginate();
-        $cursos['cursos'] = Curso::paginate(5);
+        $cursos['cursos'] = Curso::paginate(10);
 
         //return view('cursos.index', compact('cursos'));
         return view('cursos.index', $cursos);
@@ -30,11 +30,13 @@ class CursoController extends Controller
             'codigoC' => 'required|string|max:20'
 
         ];
+
+                
         //$datosCurso = request()->all();
         $datosCurso = request()->except('_token');
         Curso::insert($datosCurso);
 
-        return redirect('cursos')->with("mensaje", "Curso agregado satisfactoriamente");
+        return redirect('cursos')->with("message", "Curso agregado satisfactoriamente");
         //return response()->json($datosCurso);
        /* $curso = new Curso();
 
@@ -72,9 +74,10 @@ class CursoController extends Controller
 
 
     public function destroy($id){
-        Curso::destroy($id);
 
-        return redirect('cursos')->with('mensaje', "Curso eliminado");
+       Curso::destroy($id);
+
+       return redirect('cursos')->with('destroy', 'Curso eliminado');
 
         
     }
