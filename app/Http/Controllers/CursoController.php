@@ -10,7 +10,7 @@ class CursoController extends Controller
     public function index(){
         
         //$cursos = Curso::orderBy('id')->paginate();
-        $cursos['cursos'] = Curso::paginate(10);
+        $cursos['cursos'] = Curso::paginate(30);
 
         //return view('cursos.index', compact('cursos'));
         return view('cursos.index', $cursos);
