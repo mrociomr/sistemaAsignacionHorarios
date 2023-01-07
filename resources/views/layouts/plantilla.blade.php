@@ -54,7 +54,7 @@
                             <a class="nav-link" href="#">Docentes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Cursos</a>
+                            <a class="nav-link" href="{{route('cursos.index')}}">Cursos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Horas</a>

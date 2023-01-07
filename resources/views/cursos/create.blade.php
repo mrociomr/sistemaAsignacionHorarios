@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="col-12">
-    <h5>Agregar curso</h5>
+    <h5 class="text-center">Agregar curso</h5>
     <a href="{{ route('cursos.index') }}"><span class="fa-solid fa-chevron-left"></span></a>
 
 

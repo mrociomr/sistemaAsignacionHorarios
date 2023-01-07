@@ -3,8 +3,9 @@
 @section('title', 'Editar curso')
 
 @section('content')
-    <h1>Editar curso</h1>
-    <a href="{{ route('cursos.index') }}">Volver</a>
+    <h5 class="text-center">Editar curso</h5>
+    <a href="{{ route('cursos.index') }}"><span class="fa-solid fa-chevron-left"></span></a>
+    <br>
     <br>
     <form action="{{route('cursos.update', $curso)}}" method="post" enctype="multipart/form-data">
         @csrf
@@ -100,6 +101,6 @@
                 @enderror
             </div>
             <br>
-            <button type="submit" class="btn btn-success m-3 col-md-3">Enviar</button>
+            <button type="submit" class="btn btn-success">Enviar</button>
     </form>
 @endsection

@@ -29,7 +29,6 @@
 
             <thead>
                 <tr>
-                    <th scope="col">N°</th>
                     <th scope="col">Código</th>
                     <th scope="col">Área Curricular</th>
                     <th scope="col">Asignatura</th>
@@ -44,7 +43,6 @@
             <tbody>
                 @foreach ($cursos as $curso)
                     <tr>
-                        <th scope="row">{{ $curso->id }}</th>
                         <td>{{ $curso->codigoC }}</td>
                         <td>{{ $curso->areaC }}</td>
                         <td>{{ $curso->nombre }}</td>
