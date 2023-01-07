@@ -184,8 +184,13 @@
                     <br>
                     <br>
                     <br>
-                    @yield('content')
+                    <div class="card border-info mb-3" style="max-width: 100%;">
+                    <div class="card-header">Modulo: @yield('title')</div>
+                    <div class="card-body">
+                        @yield('content')  
                     </div>
+                    
+                    
                 </div>
                 
             

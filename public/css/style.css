@@ -1,3 +1,12 @@
+html, body {
+    background-image: url("https://thumbs.dreamstime.com/b/textura-gris-del-fondo-d-53148298.jpg%22");
+    
+        widht:100%;
+        height: 100vh;
+        margin:0;
+
+}
+
 nav{
     height: 70px;
 }

@@ -13,16 +13,15 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
     <div class="columns">
-        <h5>Cursos</h5>
 
-        @if(Session::has('destroy'))
-            <div id=mensaje class="alert alert-danger">
-                <p>{{Session::get('destroy')}} </p>
-            </div>
-        @endif
+
+        <h1>Cursos</h1>
+        <!---CAMPO BUSCAR-->
+        <br>
 
         <!--BOTÓN AGREGAR CURSO -->
         <a class="btn btn-success" href="{{ url('cursos/create') }}" role="button">Agregar curso</a>
+        <br>
         <br>
 
 
