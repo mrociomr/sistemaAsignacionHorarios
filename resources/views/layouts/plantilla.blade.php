@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,16 +22,18 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Istok+Web&family=K2D:wght@100&family=Karla&family=PT+Sans&display=swap');
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css" />
+    <script src="https://kit.fontawesome.com/49d967e6a5.js" crossorigin="anonymous"></script>
     <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
 
-</head>
+    
+
 
 <body>
 
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Offcanvas dark navbar</a>
+        <img src="https://derecho.unap.edu.pe/storage/2019/05/unap_logo.svg" alt="Bootstrap" width="30" height="24">
+            <a class="navbar-brand" href="#">Sistema de Asignación de Horarios</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -165,6 +166,7 @@
             </script>
             <script src="https://kit.fontawesome.com/49d967e6a5.js" crossorigin="anonymous"></script>
             @yield('js')
+
 </body>
 
 </html>

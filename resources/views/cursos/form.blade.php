@@ -41,17 +41,20 @@
                     <div class="form-group row">
                       <div class="col">
                         <label>Horas Teóricas:</label>
+
                         <input class="form-control" data-inputmask="'alias': 'email'" type="number" name="horasT"
                         value="{{ isset($curso->horasT) ? $curso->horasT : '' }} " id="ht">
                       </div>
                       <div class="col">
                         <label>Horas Prácticas: </label>
+
                         <input class="form-control" data-inputmask="'alias': 'ip'" type="number" name="horasP"
                         value="{{ isset($curso->horasP) ? $curso->horasP : '' }} " id="hp">
                       </div>
                     </div>
                     <div class="form-group">
                       <label>Horas Totales:</label>
+
                       <input class="form-control" data-inputmask="'alias': 'currency'" style="text-align: left;" type="number" name="horasTotales"
                         value="{{ isset($curso->horasTotales) ? $curso->horasTotales : '' }} " id="horasTotales">
                     </div>

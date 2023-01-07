@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+nav{
+    height: 80px;
+}
+
+.navbar-main,
+ .sidebar-main {
+     background: radial-gradient(#124073, #0b2c4f);
+ }
+=======
 html, body {
     background-image: url("https://thumbs.dreamstime.com/b/textura-gris-del-fondo-d-53148298.jpg%22");
     
@@ -11,6 +21,7 @@ nav{
     height: 70px;
 }
 
+>>>>>>> f88c480d532758aef219dd3344ff7c1f6c318ae4
  
  .font {
      font-family: 'Karla', sans-serif;
@@ -40,12 +51,15 @@ nav{
      background-color: #FFFFFF;
  }
 
+<<<<<<< HEAD
+=======
 .contenedor{
     margin-top: 20px;
     
 }
 
 
+>>>>>>> f88c480d532758aef219dd3344ff7c1f6c318ae4
  .titulo_una  {
     color: #FFFFFF;
     cursor: pointer;
@@ -53,4 +67,10 @@ nav{
  }
  .titlec:hover {
     color: rgb(255, 255, 255);
+<<<<<<< HEAD
   }
+
+  
+=======
+  }
+>>>>>>> f88c480d532758aef219dd3344ff7c1f6c318ae4

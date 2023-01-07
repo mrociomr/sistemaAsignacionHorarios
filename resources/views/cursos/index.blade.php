@@ -4,9 +4,6 @@
 
 @section('content')
 
-    @if (Session::has('mensaje'))
-        {{ Session::get('mensaje') }}
-    @endif
 
 
 
@@ -26,7 +23,10 @@
 
 
         <!------------TABLA CURSOS-------------->
+        <div class="table-responsive">
+
         <table id="example" class="table table-striped table-bordered nowrap dataTable no-footer dtr-inline collapsed" style="width: 100%;" aria-describedby="example_info">
+
             <thead>
                 <tr>
                     <th scope="col">N°</th>
@@ -55,61 +55,23 @@
                         <td>{{ $curso->horasTotales }}</td>
                         <td>
                             <!----OPCIÓN EDITAR---->
-
-                            <a class="btn btn-light btn-sm" href="{{ url('/cursos/' . $curso->id . '/edit') }}"
+                            <a  class="btn btn-outline-dark btn-sm" href="{{ url('/cursos/' . $curso->id . '/edit') }}"
                                 role="button"><span class="fa-solid fa-pen-to-square" ></span></a>
 
 
-                            <form action="{{route('cursos.destroy', $curso)}}" method="post" style="display: inline" class="eliminar"> @csrf @method('delete') <button type="submit" class="btn btn-outline-danger btn-sm"><i class="fa-solid fa-trash"></i> </button></form>
+                            <form action="{{route('cursos.destroy', $curso)}}" method="post" style="display: inline" class="eliminar"> @csrf @method('delete') <button type="submit" class="btn btn-outline-dark btn-sm"><i class="fa-solid fa-trash"></i> </button></form>
                              
+
                         </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
-
-        
+    </div>
     </div>
 
-<!------MODAL DE CONFIRMACIÓN-------------->
-{{-- <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>¿Estas seguro de eliminar el curso?</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <form action="{{route('cursos.destroy', $curso)}}" method="POST">
-            @csrf @method('DELETE')
-            <button type="submit" class="btn btn-danger delete">Eliminar</button>
-        </form>
-        
-      </div>
-    </div>
-   </div>
-</div> --}}
 </div>
 
-<!--- MODAL CONFIRMACION JS -->
-
-
-
-
-
-    <!--
-        <a href="{{ route('cursos.create') }}">Agregar curso</a>
-        <ul>
-            @foreach ($cursos as $curso)
-    <li>{{ $curso->nombre }}</li>
-    @endforeach
-        </ul>
-
-        {{ $cursos->links() }} -->
         
 @endsection
 
@@ -173,4 +135,5 @@ $('.eliminar').submit(function(e){
             $('#mensaje').fadeOut(1000);
         }, 1000);
 </script>
+
 @endsection
